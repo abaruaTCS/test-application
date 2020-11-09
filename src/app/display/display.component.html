@@ -1,0 +1,123 @@
+<div class="container col-12">
+  <div class="row justify-content-center" *ngIf="flag && !submitFlag">
+    <button type="button" class="btn btn-primary" (click)="takeQuiz()">
+      Take Quiz
+    </button>
+  </div>
+  <div *ngIf="!flag && !submitFlag">
+    <div class="row">
+      <h4>{{ this.q }}</h4>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <form [formGroup]="answerRef" (ngSubmit)="checkAnswer()">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="checkbox"
+                formControlName="one"
+                value="one"
+              />&nbsp;&nbsp;{{ this.oOne }}
+            </div>
+            <div class="col-6">
+              <input
+                type="checkbox"
+                formControlName="two"
+                value="two"
+              />&nbsp;&nbsp;{{ this.oTwo }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="checkbox"
+                formControlName="three"
+                value="three"
+              />&nbsp;&nbsp;{{ this.oThree }}
+            </div>
+            <div class="col-6">
+              <input
+                type="checkbox"
+                formControlName="four"
+                value="four"
+              />&nbsp;&nbsp;{{ this.oFour }}
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="sb col-12">
+              <input type="submit" value="Submit" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <nav class="nav">
+        <button
+          type="button"
+          class="btn btn-light"
+          (click)="loadFirstQuestion()"
+        >
+          First
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button
+          type="button"
+          class="btn btn-light"
+          (click)="loadPrevQuestion()"
+        >
+          Prev
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button
+          type="button"
+          class="btn btn-light"
+          (click)="loadNextQuestion()"
+        >
+          Next
+        </button>
+        &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-light" (click)="loadLastQustion()">
+          Last
+        </button>
+      </nav>
+    </div>
+    <hr />
+    <div class="row">
+      <nav class="navbar">
+        <form class="form-inline">
+          <button class="btn btn-info" type="button" (click)="submitQuiz()">
+            Submit Quiz
+          </button>
+        </form>
+      </nav>
+    </div>
+  </div>
+  <div *ngIf="submitFlag">
+    <div *ngFor="let question of questionInfo">
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+            <span
+              ><strong>{{ question.q }}</strong></span
+            >
+          </div>
+          <div class="row">
+            <span>Answer: {{ question.ans }}</span>
+          </div>
+          <div
+            class="row"
+            [ngStyle]="
+              question.ans == question.userResponse
+                ? { color: 'green' }
+                : { color: 'red' }
+            "
+          >
+            <span>Your Answer: {{ question.userResponse }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+{
+  "question": [
+    {
+      "q": "1. In 1741, explorers discovered large populations of sea otters and fur seals in the waters around the Aleutian Islands. The explorers claimed the area for what country?",
+      "oOne": "Russia",
+      "oTwo": "Netherlands",
+      "oThree": "United Kingdom",
+      "oFour": "Australia",
+      "ans": "one",
+      "correct": false,
+      "userResponse": ""
+    },
+    {
+      "q": "2. The world's highest-quality emeralds are mined near Bogota in which South American country?",
+      "oOne": "Venezuela",
+      "oTwo": "Equador",
+      "oThree": "Colombia",
+      "oFour": "Argentina",
+      "ans": "three",
+      "correct": false,
+      "userResponse": ""
+    },
+    {
+      "q": "3. Which island is farther north?",
+      "oOne": "Sri Lanka",
+      "oTwo": "New Guinea",
+      "oThree": "Papua",
+      "oFour": "Madagascar",
+      "ans": "one",
+      "correct": false,
+      "userResponse": ""
+    },
+    {
+      "q": "4. The Philippines produces more of which grain?",
+      "oOne": "Wheat",
+      "oTwo": "Rice",
+      "oThree": "Barley",
+      "oFour": "Tea",
+      "ans": "two",
+      "correct": false,
+      "userResponse": ""
+    },
+    {
+      "q": "5. What English-speaking Central American country was formerly known as British Honduras?",
+      "oOne": "Panama",
+      "oTwo": "Honduras",
+      "oThree": "Belize",
+      "oFour": "Barbados",
+      "ans": "three",
+      "correct": false,
+      "userResponse": ""
+    }
+  ]
+}
